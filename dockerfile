@@ -21,4 +21,4 @@ RUN apt-get update \
 COPY ./scripts /app/scripts
 
 # 3) Switch back to default user
-USER node
+USER $UID:$GID
