@@ -1,0 +1,10 @@
+# scripts/powershell.yml
+name: powershell
+description: Run arbitrary PowerShell code
+command_prefix: /pwsh    # this is the slash‑command you’ll type in the chat
+execution:
+  # we pass the user’s code as a here‑string to pwsh
+  cmd: |
+    pwsh -NoProfile -NonInteractive -Command @"
+    {{ code }}
+    "@
